@@ -1,0 +1,7 @@
+America 86
+Asia 89
+Oceania 89
+Africa 88
+Europa 88
+
+
