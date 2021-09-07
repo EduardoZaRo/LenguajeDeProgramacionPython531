@@ -1,0 +1,72 @@
+﻿/Escriba un programa que contenga la subrutina DistanciaManhattan, la cual recibe dos
+/coordenadas en el plano cartesiano y despliega su distancia Manhattan en base a la
+/fórmula:
+/|𝑥1 − 𝑥2| + |𝑦1 − 𝑦2|
+/El usuario ingresa en el código principal las coordenadas (x1, y1) y (x2, y2).
+
+
+Input
+Store X1
+Input 
+Store Y1
+Input
+Store X2
+Input 
+Store Y2
+
+DistanciaManhattan, load X1
+					Subt X2
+                    Store X1
+                    load Y1
+                    Subt Y2
+                    Store Y1
+
+                    load X1
+                    Skipcond 800
+                    Jns absoluto_X
+                    
+                    load Y1
+                    Skipcond 800
+                    Jns absoluto_Y
+load X1
+Add Y1
+Store X1
+Output
+Halt
+
+absoluto_X, HEX 000
+			load aux
+            Add X1
+            Store aux
+			load X1
+            Subt X1
+            Store X1
+			load X1
+            Subt aux
+            Store X1
+            JumpI absoluto_X
+
+absoluto_Y, HEX 000
+			load aux_1
+            Add Y1
+            Store aux_1
+			load Y1
+            Subt Y1
+            Store Y1
+			load Y1
+            Subt aux_1
+            Store Y1
+            JumpI absoluto_Y
+
+            
+
+
+
+
+
+X1, DEC 0
+Y1, DEC 0
+X2, DEC 0
+Y2, DEC 0
+aux, DEC 0
+aux_1, DEC 0
